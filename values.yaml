@@ -1,0 +1,5 @@
+name: bkserver
+
+image:
+  repository: superm4n/external-dns-operator
+  tag: v0.0.1
