@@ -1,0 +1,18 @@
+apiVersion: external-dns.appscode.com/v1alpha1
+kind: ExternalDNS
+metadata:
+  name: edns
+  namespace: demo
+spec:
+  sources:
+    - group: Core
+      version: v1
+      kind: service
+  registry: txt
+  txtOwnerID: external-dns
+  txtPrefix: demo
+  provider: aws
+  domainFilter:
+    - superm4n.tk
+  aws:
+    awsZoneType: public
